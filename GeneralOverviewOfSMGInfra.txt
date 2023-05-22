@@ -1,0 +1,39 @@
+#General Overview about SMG Infrastructure
+##Referring to the document “DevOps Computer Setup and Important Links”.
+1.	VMWare ESX
+•	There are 2 V centers CH (Chicago) & KC (Kansas City ) backup in case of power outage or something. Where all the servers are located.
+•	One of the data centers can be logged using email address. While the other one can be done using only the username.
+•	In the v centers we have list of resources like java files, EPM, Jenkins and API endpoint
+2.	EPM 
+•	Mainly used for application logs.
+3.	Mesh Linux Server
+•	We have a list of mesh servers in the v center. We can SSH in to those using the password credentials in the keypass file.
+•	The format of the SSH command would be $ssh username@mesh_server_id (i.e – ch-api-mesh01-p).
+•	Linux boxes are on centOS – 8.
+4.	Prometheus & Graphana
+•	Monitoring boxes with high CPU load
+5.	API
+•	Severals API like SVC (used for backend services), WEB (Frontend API for office 365), Auth API (used for authentication purposes).
+6.	Rabbit MQ
+•	Several queues setup for all the stages. Test, Dev, Prod Stage environment.
+•	URL: rmq.smg.com & (incase for internal use internal.rmq.smg.com) use the same format for dev, test, stage and prod.
+7.	Several deployed services for the company like stat, structure, text, translation and so on.
+8.	AWS
+•	We have 11 AWS accounts. The main 2 are smg-shared-prod (Production Account) and smg-shared-non-prod (Stage Account)
+•	smg sandbox account is used mainly to test something out we need.
+•	smg auth account is mainly used to IAM users that we have.
+•	On our stage account we are running everything that we have on dev, test and stage.
+9.	Team Foundation Server (TFS)
+•	There are some old infrastructure on TFS which are not moved to github. However can be moved to Github.
+10.	Octopus
+•	There are some pipelines for EMS that are pushed to octopus.
+•	We have a whole section for EMS Which have several services like EMS configuration detection, import services, Response Manager, Schedule Manager and service APIs.
+•	We can refer to the confluence link for more details : https://smg-software.atlassian.net/wiki/spaces/EMS/overview.
+•	Explained different redis clusters on octopus used to cache various application data.
+11.	Jira Tasks
+•	Explained the Kanban board.
+•	Explained the SMG request center with different request use cases.
+•	Explained other Jira functionalities 
+12.	We have a format of IP addresses that helps us understand whether it’s in an internal network or external network.
+If the IP have 10. X.X.X. it means it is hosted in an internal network and. 10.20. X. X means it is hosted in Chicago (CH) and 10.60. X. X means it is hosted in Kansas City (KC). We can check the IP address by pinging like (i.e : ping resource_id) on the powershell.
+
