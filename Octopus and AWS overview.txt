@@ -1,0 +1,15 @@
+1.	Explaining how to take an application from the TFS server and matching it on to the octopus server by takin the example (data-streaming-enrichment text processing console).
+2.	Showing the octopus portal and searching the same application mentioned in point 1. Under the process tab we have different pipelines deploying to the same role (i.e : data-streaming-enrichment-fact).
+3.	Explained different project variables running on on-prem kafka instances where all the application settings can be found in appsettings.json
+4.	Pinging different servers and checking whether it’s an internal server or external and also in which region it is hosted (Chicago and Kansas City)
+5.	Explained deployment targets under the infrastructure and searching with the target roles and checking which servers we are using 1for different environment (Dev, Stage, Test, Prod).
+6.	Explained tickets regarding user access to several databases that we use and also showed several databases that we have on different environment. 
+7.	Explained how we can save different environment username and password under the credentials tab in octopus.
+8.	Explain how to update a project variable when releasing an application and also how to view the snapshot of the previous release.
+9.	Explained the deploy process by changing the username, password, start mode.
+10.	Showed different previous tickets like create user and SSL tasks also making some documents.
+11.	Explained how to create IAM user in aws console. Which account to use and (SMG-auth) and which groups to add to certain tasks.
+12.	Showed the ansible and terraform infra in the TFS Server.
+13.	Explained a terraform file on how to create AWS infrastructure and user roles using IaC.
+14.	Explained how to use keypass file to retrieve passwords and also how to encrypt or decrypt gpg files using password stored in the keypass for the smg360 application.
+15.	Explained how an octopus deployment is triggered when any thing is committed to the github irrespective of the branch.
