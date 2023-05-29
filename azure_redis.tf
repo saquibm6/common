@@ -9,7 +9,7 @@
   }
 Not needed, is already defined*/
   resource "azurerm_redis_cache" "word_cache_redis" {
-    name = "${local.prefix}-${var.ccx_ai_svc_name}-redis"
+    name = "${local.prefix}-${var.azure-redis-name}-redis"
     resource_group_name = azurerm_resource_group.redis.name
     location = azurerm_resource_group.redis.location
     family = "C"
